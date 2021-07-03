@@ -2,9 +2,11 @@
   "name": "bookshelf-api",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Gerd Jungbluth <gerd.jungbluth@engawa.de>",
   "private": true,
   "license": "UNLICENSED",
+  "type": "commonjs",
+  "bin": "dist/main.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
