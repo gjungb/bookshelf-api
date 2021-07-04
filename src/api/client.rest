@@ -21,6 +21,6 @@ GET http://{{host}}/{{route}}/{{id}}
 
 ### OpenAPI documentation
 
-@route = api
+@api = api
 
-GET http://{{host}}/{{route}}
+GET http://{{host}}/{{api}}

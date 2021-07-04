@@ -11,6 +11,14 @@ generator client {
 }
 
 model Book {
-  id   Int @id @default(autoincrement())
-  isbn String
+  id        Int     @id @default(autoincrement())
+  title     String
+  subtitle  String?
+  isbn      String  @unique
+  abstract  String?
+  numPages  Int
+  author    String
+  publisher String?
+  price     Float
+  cover     String?
 }
