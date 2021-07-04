@@ -18,3 +18,9 @@ GET http://{{host}}/{{route}}
 @id = 1
 
 GET http://{{host}}/{{route}}/{{id}}
+
+### OpenAPI documentation
+
+@route = api
+
+GET http://{{host}}/{{route}}
