@@ -1,19 +1,24 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
+import { Book } from '@prisma/client';
+import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateBookDto } from './dto/create-book.dto';
 import { UpdateBookDto } from './dto/update-book.dto';
 
 @Injectable()
 export class BooksService {
+  constructor(private readonly prisma: PrismaService) {}
+
   create(createBookDto: CreateBookDto) {
     return 'This action adds a new book';
   }
 
-  findAll() {
-    return `This action returns all books`;
+  async findAll(): Promise<Book[]> {
+    return this.prisma.book.findMany();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} book`;
+    return this.prisma.book.findUnique({ where: { id } });
   }
 
   update(id: number, updateBookDto: UpdateBookDto) {
