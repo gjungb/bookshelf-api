@@ -1,3 +1,20 @@
-# A simple GET request
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
 
-GET http://localhost:3000
+### A simple GET request
+
+GET http://{{host}}
+
+### Read list of books
+
+@route = books
+
+GET http://{{host}}/{{route}}
+
+### Read a single book
+
+@route = books
+@id = 1
+
+GET http://{{host}}/{{route}}/{{id}}
